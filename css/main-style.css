@@ -1,0 +1,24 @@
+p {
+    font-family: 'Univers Condensed', sans-serif;
+
+}
+.main-container {
+    width: 1vw;
+    height: 1vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sidebar-frame {
+    background-color: #0F0F0F;
+    height: 100%;
+}
+#header {
+
+}
+#right-sidebar {
+
+}
+#left-sidebar {
+
+}
