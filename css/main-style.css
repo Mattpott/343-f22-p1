@@ -1,53 +1,24 @@
 body {
-    /* background-color: #0F0F0F; */
+    background-color: #0F0F0F;
 }
 
 p {
     padding: 1rem;
-    font-family: 'Univers Condensed', sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-#main-container {
-    position: relative;
-    width: 100vw;
-    display: grid;
-    padding-top: 4rem;
-    grid-template-columns: 10% 80% 10%;
-    grid-template-areas: 
-    "l-sidebar main r-sidebar";
+/* Navbar content */
+#logo {
+    height: 3rem;
+    min-width: fit-content;
 }
-.sidebar-frame {
-    border: 3px solid #0F0F0F;
-    background-color: #0F0F0F;
-}
-main {
-    position: relative;
-    top: 4rem;
-    grid-area: main;
-    background-color: #fafafa;
-    margin-top: 4rem;
-    border: 3px solid rgb(25, 25, 25);
-}
-#right-sidebar {
-    grid-area: l-sidebar;
-}
-#left-sidebar {
-    grid-area: r-sidebar;
-}
-
-#background-image {
-    position: fixed;
-    padding-top: 4rem;
-    border-left: 3px solid rgb(25, 25, 25);
-    border-right: 3px solid rgb(25, 25, 25);
-}
-
 #navbar {
+    z-index: 9999;
     position: fixed;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -57,8 +28,9 @@ main {
     background-color: #0F0F0F;
     border-bottom: 3px solid rgb(25, 25, 25);
 }
-
-/* Navbar content */
+#navbar > li {
+    padding: 2rem 2rem;
+}
 #navbar > li > a {
     font-family: 'Univers Condensed', sans-serif;
     color: #fafafa;
@@ -66,11 +38,47 @@ main {
     font-weight: bold;
     text-decoration: none;
 }
-
+#navbar > li > .active{
+    text-decoration: overline;
+}
 #navbar > li > a:hover {
     text-decoration: underline;
 }
 
-#logo {
-    width: 10vmin;
+
+/* image that moves into header when scrolled up */
+#background-image {
+    position: fixed;
+    top: 4rem;
+    left: 50%;
+    z-index: -9999;
+    width: 75.5vw;
+    margin-left: calc(-75.5vw/2);
+    margin-right: auto;
+    border-left: 3px solid rgb(25, 25, 25);
+    border-right: 3px solid rgb(25, 25, 25);
+}
+
+main {
+    z-index: 1;
+    position: relative;
+    top: 40vw;
+    background-color: #fafafa;
+    border-top: 3px solid rgb(25, 25, 25);
+    border-left: 12vw solid #0F0F0F;
+    border-right: 12vw solid #0F0F0F;
+}
+
+#footer {
+    border-top: 3px solid rgb(25, 25, 25);
+    background-color: #0F0F0F;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #fafafa;
+    font-size: 0.8em;
+}
+
+#footer > p > a {
+    color: #fafafa;
 }
