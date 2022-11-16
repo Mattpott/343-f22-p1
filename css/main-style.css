@@ -1,53 +1,63 @@
+/* Generic style content */
 body {
     background-color: #0F0F0F;
 }
 
 p {
     padding: 1rem;
+    font-size: 1.25em;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* Navbar content */
+ul {
+    font-size: 1.25em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    list-style-type: circle;
+}
+
+/* Navbar style */
 #logo {
     height: 3rem;
     min-width: fit-content;
 }
+
 #navbar {
     z-index: 9999;
     position: fixed;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
     list-style-type: none;
     margin: 0;
     padding: 0;
     top: 0;
     width: 100vw;
-    height: 4rem;
     background-color: #0F0F0F;
     border-bottom: 3px solid rgb(25, 25, 25);
 }
-#navbar > li {
+
+#navbar>li {
     padding: 2rem 2rem;
 }
-#navbar > li > a {
+
+#navbar>li>a {
     font-family: 'Univers Condensed', sans-serif;
     color: #fafafa;
     font-size: 1.25rem;
     font-weight: bold;
     text-decoration: none;
 }
-#navbar > li > .active{
+
+#navbar>li>.active {
     text-decoration: overline;
 }
-#navbar > li > a:hover {
+
+#navbar>li>a:hover {
     text-decoration: underline;
 }
 
-
 /* image that moves into header when scrolled up */
-#background-image {
+.background-image {
     position: fixed;
     top: 4rem;
     left: 50%;
@@ -59,26 +69,68 @@ p {
     border-right: 3px solid rgb(25, 25, 25);
 }
 
+/* Formatting footer to be under main text */
+.main-container {
+    position: absolute;
+    width: 99.2vw;
+}
+
+/* Main page contents' style */
 main {
     z-index: 1;
-    position: relative;
-    top: 40vw;
+    min-height: fit-content;
+    padding-bottom: 4rem;
     background-color: #fafafa;
     border-top: 3px solid rgb(25, 25, 25);
     border-left: 12vw solid #0F0F0F;
     border-right: 12vw solid #0F0F0F;
 }
 
+/* Footer style */
 #footer {
+    z-index: 2;
     border-top: 3px solid rgb(25, 25, 25);
     background-color: #0F0F0F;
-    margin-left: auto;
-    margin-right: auto;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
     text-align: center;
     color: #fafafa;
     font-size: 0.8em;
 }
 
-#footer > p > a {
+#footer>p>a {
     color: #fafafa;
+}
+
+/* 
+ * Have the navbar be left-justified and one, non-wrapping row when screen > 1200px wide
+ * and have the main content be scaled according to vertical size rather than horizontal
+*/
+@media screen and (min-width: 1200px) {
+    #navbar {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        height: 4rem;
+    }
+
+    .main-container {
+        top: 40vw;
+    }
+}
+
+/* 
+ * Have the navbar be centered and wrap when screen < 1200px wide
+ * and have the main content be scaled according to horizontal size rather than vertical
+ */
+@media screen and (max-width: 1200px) {
+    #navbar {
+        justify-content: center;
+        flex-wrap: wrap;
+        height: min-content;
+    }
+
+    .main-container {
+        top: 40vh;
+    }
 }

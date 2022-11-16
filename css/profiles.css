@@ -1,0 +1,62 @@
+.profile {
+    display: block;
+    min-height: 350px;
+    border-top: 2px solid rgb(200, 200, 200);
+}
+
+.profile>figure {
+    width: 20%;
+    min-width: 350px;
+    margin-top: 1.5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    text-align: center;
+    font-size: 1em;
+}
+
+.profile-email {
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+/* Have profile images break textual content and be left-justified when screen > 1200px wide */
+@media screen and (min-width: 1200px) {
+    .profile {
+        display: block;
+    }
+
+    .profile>figure {
+        float: left;
+    }
+
+    .profile>p {
+        width: 80%;
+    }
+}
+
+/* Have profile images be blocks and centered when screen < 1200px wide */
+@media screen and (max-width: 1200px) {
+    .profile {
+        display: flex;
+        flex-direction: column;
+        min-height: 350px;
+        border-top: 2px solid rgb(200, 200, 200);
+    }
+
+    .profile>figure {
+        float: none;
+        display: block;
+        align-self: center;
+    }
+
+    .profile>p {
+        width: 100%;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .profile-email {
+        align-self: center;
+    }
+}

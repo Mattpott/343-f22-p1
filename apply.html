@@ -17,28 +17,39 @@
   <ul id="navbar">
     <li><img id="logo" src="images/NOTSA Logo.png"></li>
     <li><a href="index.html">Home</a></li>
-    <li><a href="achievements.html">Achievements</a></li>
+    <li><a href="graduates.html">Graduates</a></li>
     <li><a class="active" href="#">Apply</a></li>
     <li><a href="contact.html">Contact</a></li>
     <li><a href="staff.html">Staff</a></li>
   </ul>
-  <div id="background-image">
+  <div class="background-image">
     <img src="images/Milky Way.jpg" alt="Center of the Milky Way Galaxy">
   </div>
-  <main>
-    <label for="name">Please enter your name:</label>
-    <input name="name" type="text" size="10">
-    <label for="reason">Please enter your reason for application:</label>
-    <input name="reason" type="text">
-    <label for="phone">Please enter your phone number (###-###-####):</label>
-    <input name="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-    <label for="num">Please enter your favorite number:</label>
-    <input name="num" type="number">
+
+  <!-- Exists for footer to display properly -->
+  <div class="main-container">
+    <main>
+      <form action="" method="get">
+        <label for="name">Please enter your name:</label>
+        <input name="name" type="text" required>
+        <label for="email">Please enter your email address:</label>
+        <input name="email" type="email" required>
+        <label for="reason">Please enter your reason for application:</label>
+        <input name="reason" type="text" required>
+        <label for="phone">Please enter your phone number (###-###-####):</label>
+        <input name="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        <label for="num">Please enter your favorite number:</label>
+        <input name="num" type="number" required>
+        <div>
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </main>
     <div id="footer">
       <p>All images courtesy of <a href="https://www.nasa.gov/multimedia/imagegallery/index.html">NASA</a> and the US
         Government.</p>
     </div>
-  </main>
+  </div>
 </body>
 
 </html>
