@@ -15,7 +15,7 @@
 
 <body>
   <ul id="navbar">
-    <li><img id="logo" src="images/NOTSA Logo.png"></li>
+    <li><img id="logo" src="images/NOTSA_Logo.png" alt="NOTSA Logo"></li>
     <li><a href="index.html">Home</a></li>
     <li><a href="graduates.html">Graduates</a></li>
     <li><a class="active" href="#">Apply</a></li>
@@ -23,23 +23,23 @@
     <li><a href="staff.html">Staff</a></li>
   </ul>
   <div class="background-image">
-    <img src="images/Milky Way.jpg" alt="Center of the Milky Way Galaxy">
+    <img src="images/Milky_Way.jpg" alt="Center of the Milky Way Galaxy">
   </div>
 
   <!-- Exists for footer to display properly -->
   <div class="main-container">
     <main>
-      <form action="" method="get">
-        <label for="name">Please enter your name:</label>
-        <input name="name" type="text" required>
-        <label for="email">Please enter your email address:</label>
-        <input name="email" type="email" required>
-        <label for="reason">Please enter your reason for application:</label>
-        <input name="reason" type="text" required>
-        <label for="phone">Please enter your phone number (###-###-####):</label>
-        <input name="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-        <label for="num">Please enter your favorite number:</label>
-        <input name="num" type="number" required>
+      <form method="get">
+        <label for="input-name">Please enter your name:</label>
+        <input name="input-name" id="input-name" type="text" required>
+        <label for="input-email">Please enter your email address:</label>
+        <input name="input-email" id="input-email" type="email" required>
+        <label for="input-reason">Please enter your reason for application:</label>
+        <input name="input-reason" id="input-reason" type="text" required>
+        <label for="input-phone">Please enter your phone number (###-###-####):</label>
+        <input name="input-phone" id="input-phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+        <label for="input-num">Please enter your favorite number:</label>
+        <input name="input-num" id="input-num" type="number" required>
         <div>
           <input type="submit" value="Submit">
         </div>
