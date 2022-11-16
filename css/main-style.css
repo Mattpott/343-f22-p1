@@ -3,8 +3,16 @@ body {
     background-color: #0F0F0F;
 }
 
+h1 {
+    padding-left: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 p {
     padding: 1rem;
+    padding-left: 2rem;
     font-size: 1.25em;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
